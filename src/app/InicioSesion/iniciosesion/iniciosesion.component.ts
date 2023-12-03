@@ -25,7 +25,7 @@ export class IniciosesionComponent {
         console.log('Respuesta del backend:', respuesta);
         if(respuesta.exito){
           alert("Se valido el usuario")
-          this.router.navigate(['/ruta-RegistrarComponent']); // Aqui debe de ir la ruta de la pagina
+          this.router.navigate(['/catalogo']); // Aqui debe de ir la ruta de la pagina
         }else{
           alert("El email o contraseña son incorrectos")
         }

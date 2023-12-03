@@ -25,4 +25,10 @@ export class ServicioBackendService {
     });
     return this.http.post(url,body,{headers});
   }
+
+  recolectarPeliculas(){
+    const url = `http://localhost:5000/movies`;
+
+    return this.http.get(url);
+  }
 }

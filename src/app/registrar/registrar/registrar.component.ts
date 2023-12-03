@@ -26,7 +26,7 @@ export class RegistrarComponent {
           console.log('Respuesta del backend:', respuesta);
           if(respuesta.exito){
             alert("El usuario ha sido registrado")
-            this.router.navigate(['/ruta-IniciosesionComponent']); // Aqui debe de ir la ruta de la pagina de peliculas
+            this.router.navigate(['/catalogo']); // Aqui debe de ir la ruta de la pagina de peliculas
           }else{
             alert("El correo ya fue registrado")
           }

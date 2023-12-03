@@ -1,0 +1,145 @@
+*{
+    color: white;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #3f3f3f;
+}
+header {
+    background-color: #111;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    height: 80px;
+    width: 150px;
+}
+
+/* Seccion banner pelicula destacada  */
+.fondo {
+    position: relative;
+}
+
+.fondo::before {
+    content: '';
+    background-image: url(../../../assets/fnaf3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: brightness(0.3);
+}
+
+.fondo-inner {
+    /* Estilos adicionales para el contenido interno */
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.featured-movie {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.featured-movie img {
+    max-width: 300px;
+    height: auto;
+}
+
+.info {
+    width: 500px;
+    text-align: justify;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+}
+
+.sin{
+    margin: 5px;
+}
+
+.pelis{
+    height: auto;
+    width: 350px;
+    margin-left: 300px;
+    z-index: 1;
+}
+/* Fin de seccion pelicula destacada */
+/*  Seccion catalogo de peliculas */
+.tituloPeliculas{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tituloPeliculas h2{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.main-content {
+    padding: 20px;
+    background-color: #3f3f3f;
+}
+
+.movie-list {
+    margin: 0 auto;
+
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.movie-card {
+    width: 200px;
+    aspect-ratio: 2/3;
+    object-fit: cover;
+}
+.movie-card img{
+    max-width: 100%;
+    height: 300px;
+    transition: transform 0.2s ease;
+}
+
+.movie-card img:hover{
+    transform: scale(1.1);
+}
+
+.peliss{
+    background-color: #3f3f3f;
+    border: none;
+}
+
+.pelis2{
+    height: 250px;
+}
+
+.modal-header{
+    background-color: #3f3f3f
+}
+
+.modal-body{
+    background-color: #3f3f3f
+}
+
+.modal-footer{
+    background-color: #3f3f3f
+}
+
+footer {
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
