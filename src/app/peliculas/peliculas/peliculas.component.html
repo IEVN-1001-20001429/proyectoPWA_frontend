@@ -33,32 +33,11 @@
         <!--Lista de Series-->
         <div class="movie-list">
             <div class="movie-card" *ngFor="let pelicula of listaPeliculas;">
-                <button class="peliss" type="button" data-bs-toggle="modal" data-bs-target="#modalPelicula">
+                <button class="peliss" type="button" (click)="abrirModal(pelicula)">
                 <img class="pelis2" [src]="'../../../assets/'+pelicula.banner" [alt]="pelicula.titulo"></button>
             </div>
         </div>
     </section>
-
-    <!--Modal para mostrar detalles de pelicula-->
-    
-    <!-- Modal -->
-    <div class="modal fade " id="modalPelicula" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-            ...
-            </div>
-            <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-        </div>
-        </div>
-    </div>
     </body>
 
 </html>

@@ -1,0 +1,29 @@
+    <!--Modal para mostrar detalles de pelicula-->
+    <div class="modal-header">
+        <h4 class="modal-title text-center v-100">{{ pelicula.titulo }}</h4>
+        <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss()"></button>
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-6 imgPelicula">
+                <img class="imgModal" [src]="'../../../assets/'+pelicula.banner" [alt]="pelicula.titulo">
+            </div>
+            <div class="col-6 infoPelicula">
+                <!-- Detalles de la película -->
+                <p class="h-50 sinopsisPelicula">{{ pelicula.sinopsis }}</p>
+                <div class="detallesPelicula">
+                    <p>Lanzamiento: {{ pelicula.fecha }}</p>
+                    <p>Genero: {{ pelicula.genero }}</p>
+                    <p>Estudio: {{ pelicula.estudio }}</p>
+                </div>
+                <div class="d-flex justify-content-around w-100">
+                    <button class="btn btn-success">Reproducir</button>
+                    <button class="btn btn-info">Ver Trailer</button>
+                </div>
+                <!-- detalles -->
+            </div>
+        </div>  
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="activeModal.dismiss()">Cerrar</button>
+    </div>

@@ -11,20 +11,24 @@ import { RegistrarComponent } from './registrar/registrar/registrar.component';
 import { PeliculasComponent } from './peliculas/peliculas/peliculas.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ModalPeliculaComponent } from './modals/modal-pelicula/modal-pelicula.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     IniciosesionComponent,
     RegistrarComponent,
-    PeliculasComponent
+    PeliculasComponent,
+    ModalPeliculaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    CommonModule
+    CommonModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

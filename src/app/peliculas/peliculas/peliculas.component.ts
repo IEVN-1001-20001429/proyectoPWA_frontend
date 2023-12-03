@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ServicioBackendService } from 'src/app/comunicacion/servicio-backend.service';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ModalPeliculaComponent } from 'src/app/modals/modal-pelicula/modal-pelicula.component';
 
 @Component({
   selector: 'app-peliculas',
@@ -9,7 +11,7 @@ import { ServicioBackendService } from 'src/app/comunicacion/servicio-backend.se
 export class PeliculasComponent implements OnInit {
   listaPeliculas: any[] = [];
 
-  constructor(private servicioBackend: ServicioBackendService) {}
+  constructor(private servicioBackend: ServicioBackendService, private modalService: NgbModal) {}
 
   ngOnInit(){
     this.servicioBackend.recolectarPeliculas().subscribe(
@@ -28,5 +30,10 @@ export class PeliculasComponent implements OnInit {
         // Manejar errores aquí
       }
     );
+  }
+
+  abrirModal(pelicula: any): void {
+    const modalRef = this.modalService.open(ModalPeliculaComponent, { size: 'lg' });
+    modalRef.componentInstance.pelicula = pelicula;
   }
 }

@@ -125,18 +125,6 @@ header {
     height: 250px;
 }
 
-.modal-header{
-    background-color: #3f3f3f
-}
-
-.modal-body{
-    background-color: #3f3f3f
-}
-
-.modal-footer{
-    background-color: #3f3f3f
-}
-
 footer {
     background-color: #111;
     color: #fff;
