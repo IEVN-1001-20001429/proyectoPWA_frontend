@@ -13,6 +13,10 @@ import { PeliculasComponent } from './peliculas/peliculas/peliculas.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ModalPeliculaComponent } from './modals/modal-pelicula/modal-pelicula.component';
+import { AdministradorComponent } from './administrador/administrador/administrador.component';
+import { ModalAgregarComponent } from './modals/modal-agregar/modal-agregar.component';
+import { ModificarPeliculaComponent } from './modals/modificar-pelicula/modificar-pelicula.component';
+import { ModalEliminarComponent } from './modals/modal-eliminar/modal-eliminar.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +24,11 @@ import { ModalPeliculaComponent } from './modals/modal-pelicula/modal-pelicula.c
     IniciosesionComponent,
     RegistrarComponent,
     PeliculasComponent,
-    ModalPeliculaComponent
+    ModalPeliculaComponent,
+    AdministradorComponent,
+    ModalAgregarComponent,
+    ModificarPeliculaComponent,
+    ModalEliminarComponent
   ],
   imports: [
     BrowserModule,

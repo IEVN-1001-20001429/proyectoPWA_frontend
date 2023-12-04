@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Administrador</title>
+</head>
+<body>
+  <header>
+    <h1>Administrador de peliculas</h1>
+  </header>
+  <div class="btnAgregarCss">
+    <button class="btn btn-success" type="button" (click)="abrirModalAgregar()">Agregar Pelicula</button>
+  </div>
+  <section class="container">
+    
+    <table class="table tableAdmin">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Titulo</th>
+          <th scope="col">Fecha</th>
+          <th scope="col">Genero</th>
+          <th scope="col">Sinopsis</th>
+          <th scope="col">Estudio</th>
+          <th scope="col">Imagen</th>
+          <th scope="col">M</th>
+          <th scope="col">E</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let pelicula of listaPeliculas;">
+          <th scope="row">{{pelicula.id}}</th>
+          <td>{{ pelicula.titulo }}</td>
+          <td>{{ pelicula.fecha }}</td>
+          <td>{{ pelicula.genero }}</td>
+          <td>{{ pelicula.sinopsis }}</td>
+          <td>{{ pelicula.estudio }}</td>
+          <td class="imgTable"><img class="imgModal" [src]="'../../../assets/'+pelicula.banner" [alt]="pelicula.titulo"></td>
+          <td>
+            <button (click)="abrirModalEditar(pelicula)"><img class="imgBoton" src="../../../assets/btnEditar.png" alt="Editar"></button>
+          </td>
+          <td>
+            <button (click)="abrirModalEliminar(pelicula.id)"><img class="imgBoton" src="../../../assets/btnEliminar.png" alt="Eliminar"></button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</body>
+</html>

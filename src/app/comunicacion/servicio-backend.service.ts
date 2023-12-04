@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -30,5 +31,60 @@ export class ServicioBackendService {
     const url = `http://localhost:5000/movies`;
 
     return this.http.get(url);
+  }
+
+  //Metodos para el CRUD de las peliculas
+  agregarPelicula(datos: any){
+    const url = `http://localhost:5000/movie_registration`;
+    const body = {
+      titulo: datos.titulo,
+      fecha: datos.fecha,
+      genero: datos.genero,
+      sinopsis: datos.sinopsis,
+      estudio: datos.estudio,
+      imagen: datos.imagen,
+    }
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json'
+    });
+    return this.http.post(url,body,{headers});
+  }
+
+  //Metodo para eliminar pelicula
+  eliminarPelicula(id:any){
+    const url = `http://localhost:5000/movie_delete`;
+    const body = {
+      id: id
+    }
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json'
+    });
+    return this.http.post(url,body,{headers});
+  }
+
+  //Metodo para modificar una pelicula
+  modificarPelicula(datos:any){
+    const url = `http://localhost:5000/movie_edit`;
+    const body = {
+      id: datos.id,
+      titulo: datos.titulo,
+      fecha: datos.fecha,
+      genero: datos.genero,
+      sinopsis: datos.sinopsis,
+      estudio: datos.estudio,
+      imagen: datos.imagen,
+    }
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json'
+    });
+    return this.http.post(url,body,{headers});
+  }
+
+  //Metodo para subir imagenes al ServicioBackendService
+  subirImagen(archivo: File):Observable<any> {
+    const formData = new FormData();
+    formData.append('archivo', archivo);
+
+    return this.http.post(`http://localhost:5000/subir-archivo`, formData);
   }
 }

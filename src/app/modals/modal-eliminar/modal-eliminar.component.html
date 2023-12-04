@@ -1,0 +1,9 @@
+    <!--Modal para mostrar detalles de pelicula-->
+    <div class="modal-header">
+        <h4 class="modal-title text-center v-100">¿Seguro que quieres eliminar el registro?</h4>
+        <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss()"></button>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="activeModal.dismiss()">Cerrar</button>
+        <button type="submit" class="btn btn-success" (click)="eliminarPelicula()" (click)="activeModal.dismiss()">Aceptar</button>
+    </div>

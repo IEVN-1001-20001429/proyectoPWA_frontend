@@ -1,0 +1,38 @@
+    <!--Modal para mostrar detalles de pelicula-->
+    <div class="modal-header">
+        <h4 class="modal-title text-center v-100">Modificar pelicula</h4>
+        <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss()"></button>
+    </div>
+    <div class="modal-body">
+        <form>
+            <div class="mb-3">
+                <label for="inputTitulo" class="form-label">Titulo</label>
+                <input type="text" [(ngModel)]="titulo" [value]="pelicula.titulo" name="titulo" class="form-control" id="inputTitulo" aria-describedby="agregarTitulo">
+            </div>
+            <div class="mb-3">
+                <label for="inputFecha" class="form-label">Fecha de lanzamiento</label>
+                <input type="text" [(ngModel)]="fecha" [value]="pelicula.fecha" name="fecha" class="form-control" id="inputFecha" aria-describedby="agregarFecha">
+            </div>
+            <div class="mb-3">
+                <label for="inputGenero" class="form-label">Genero</label>
+                <input type="text" [(ngModel)]="genero" [value]="pelicula.genero" name="genero" class="form-control" id="inputGenero" aria-describedby="agregarGenero">
+            </div>
+            <div class="mb-3">
+                <label for="inputSinopsis" class="form-label">Sinopsis</label>
+                <textarea [(ngModel)]="sinopsis" [value]="pelicula.sinopsis" name="sinopsis" class="form-control" name="inputSinopsis" id="inputSinopsis" cols="30" rows="10"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="inputEstudio" class="form-label">Estudio</label>
+                <input type="text" [(ngModel)]="estudio" [value]="pelicula.estudio" name="estudio" class="form-control" id="inputEstudio" aria-describedby="agregarEstudio">
+            </div>
+            <div class="mb-3">
+                <label for="inputImagen" class="form-label">Imagen de la pelicula - Banner</label>
+                <input type="file" #fileInput (change)="onFileSelected()" class="form-control" id="inputImagen" aria-describedby="agregarImagen">
+            </div>
+               
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="activeModal.dismiss()">Cerrar</button>
+        <button type="submit" class="btn btn-success" (click)="guardarArchivo(); enviarDatosModificar(); activeModal.dismiss()">Aceptar</button>
+    </div>

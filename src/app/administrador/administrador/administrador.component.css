@@ -1,0 +1,44 @@
+header{
+	color: white;
+	height: 100px;
+	background-color: #111;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+body{
+	background-color: #3f3f3f;
+}
+.btnAgregarCss{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 50px;
+}
+.container{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+}
+.tableAdmin{
+	margin: 0px 0px 50px 0px;
+}
+.tableAdmin *{
+	
+	background-color: #111;
+	color: white;
+}
+.imgBoton{
+	width: 20px;
+	background-color: white;
+}
+.imgTable img{
+	width: 50px;
+}
+.tableAdmin button{
+	background-color: transparent;
+	border: none;
+}

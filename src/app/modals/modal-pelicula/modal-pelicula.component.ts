@@ -10,4 +10,6 @@ export class ModalPeliculaComponent {
   @Input() pelicula: any;
 
   constructor(public activeModal: NgbActiveModal){}
+
+  
 }
